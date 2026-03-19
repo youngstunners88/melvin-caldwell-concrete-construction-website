@@ -1,0 +1,564 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Melvin Caldwell Concrete Construction | Concrete Contractor in Omaha, NE</title>
+    <meta name="description" content="Melvin Caldwell Concrete Construction — trusted concrete contractor in Omaha, NE. Built on Solid Ground. Call (402) 555-0193 for a free estimate.">
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <style>
+        :root {
+            --primary: #1e293b;
+            --primary-dark: #0f172a;
+            --accent: #f97316;
+            --text-dark: #0f172a;
+            --text-light: #64748b;
+            --bg: #ffffff;
+            --bg-section: #f8fafc;
+            --border: #e2e8f0;
+        }
+        *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+        html { scroll-behavior: smooth; }
+
+        body {
+            font-family: 'Roboto', sans-serif;
+            color: var(--text-dark);
+            background: var(--bg);
+            line-height: 1.7;
+            overflow-x: hidden;
+        }
+        h1, h2, h3, h4 {
+            font-family: 'Bebas Neue', cursive;
+            line-height: 1.2;
+        }
+
+        /* ── NAVBAR ── */
+        nav {
+            position: fixed; top: 0; width: 100%; z-index: 1000;
+            background: rgba(255,255,255,0.97);
+            backdrop-filter: blur(12px);
+            border-bottom: 2px solid var(--primary);
+            box-shadow: 0 2px 20px rgba(0,0,0,0.06);
+        }
+        .nav-inner {
+            max-width: 1280px; margin: 0 auto;
+            padding: 0.9rem 2rem;
+            display: flex; justify-content: space-between; align-items: center;
+        }
+        .logo {
+            font-family: 'Bebas Neue', cursive;
+            font-size: 1.4rem; font-weight: 800;
+            color: var(--primary); text-decoration: none;
+            letter-spacing: -0.02em;
+        }
+        .logo span { color: var(--accent); }
+        .nav-links { display: flex; gap: 2rem; list-style: none; }
+        .nav-links a {
+            text-decoration: none; color: var(--text-dark);
+            font-weight: 600; font-size: 0.9rem;
+            transition: color 0.2s; text-transform: uppercase; letter-spacing: 0.05em;
+        }
+        .nav-links a:hover { color: var(--primary); }
+        .nav-cta {
+            background: var(--primary); color: #fff !important;
+            padding: 0.6rem 1.5rem; border-radius: 50px;
+            transition: all 0.2s !important;
+        }
+        .nav-cta:hover { background: var(--primary-dark) !important; transform: translateY(-1px); }
+
+        /* ── HERO ── */
+        .hero {
+            min-height: 100vh;
+            background: linear-gradient(135deg, var(--primary-dark) 0%, var(--primary) 55%, #f9731655 100%);
+            color: #fff;
+            display: flex; flex-direction: column;
+            justify-content: center; align-items: center;
+            text-align: center;
+            padding: 7rem 2rem 5rem;
+            position: relative; overflow: hidden;
+        }
+        .hero::before {
+            content: '';
+            position: absolute; inset: 0;
+            background: radial-gradient(ellipse at 90% 80%, rgba(249,115,22,0.2) 0%, transparent 60%);
+            pointer-events: none;
+        }
+        .hero::after {
+            content: '';
+            position: absolute; bottom: -2px; left: 0; width: 100%;
+            height: 80px;
+            background: var(--bg);
+            clip-path: ellipse(55% 100% at 50% 100%);
+        }
+        .hero-badge {
+            display: inline-flex; align-items: center; gap: 0.5rem;
+            background: rgba(255,255,255,0.2);
+            border: 1px solid rgba(255,255,255,0.35);
+            backdrop-filter: blur(6px);
+            padding: 0.4rem 1.2rem; border-radius: 50px;
+            font-size: 0.85rem; font-weight: 600; margin-bottom: 1.5rem;
+            letter-spacing: 0.04em; text-transform: uppercase;
+        }
+        .hero h1 {
+            font-size: clamp(2.4rem, 6vw, 4.5rem);
+            font-weight: 900;
+            line-height: 1.05;
+            max-width: 900px;
+            margin: 0 auto 1.2rem;
+            text-shadow: 0 2px 20px rgba(0,0,0,0.2);
+        }
+        .hero-tagline {
+            font-size: clamp(1rem, 2.5vw, 1.4rem);
+            opacity: 0.9;
+            max-width: 640px;
+            margin: 0 auto 2.5rem;
+            font-weight: 300;
+            letter-spacing: 0.02em;
+        }
+        .hero-actions {
+            display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap;
+            position: relative; z-index: 1;
+        }
+        .btn {
+            display: inline-flex; align-items: center; gap: 0.6rem;
+            padding: 1rem 2.2rem; border-radius: 50px;
+            font-weight: 700; font-size: 1rem;
+            text-decoration: none; transition: all 0.25s;
+            font-family: 'Bebas Neue', cursive;
+            letter-spacing: 0.03em;
+        }
+        .btn-primary {
+            background: #fff; color: var(--primary);
+            box-shadow: 0 4px 20px rgba(0,0,0,0.15);
+        }
+        .btn-primary:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 12px 35px rgba(0,0,0,0.2);
+        }
+        .btn-ghost {
+            border: 2px solid rgba(255,255,255,0.7);
+            color: #fff; background: transparent;
+        }
+        .btn-ghost:hover { background: rgba(255,255,255,0.15); }
+        .btn-cta {
+            background: var(--primary); color: #fff;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.2);
+        }
+        .btn-cta:hover {
+            background: var(--primary-dark);
+            transform: translateY(-3px);
+        }
+
+        /* ── STATS BAR ── */
+        .stats-bar {
+            background: var(--primary-dark); color: #fff;
+            padding: 2.5rem 2rem;
+        }
+        .stats-inner {
+            max-width: 1000px; margin: 0 auto;
+            display: flex; justify-content: space-around; flex-wrap: wrap; gap: 2rem;
+        }
+        .stat { text-align: center; }
+        .stat-num {
+            font-family: 'Bebas Neue', cursive;
+            font-size: 3rem; font-weight: 900;
+            color: #f97316;
+            line-height: 1;
+        }
+        .stat-label { font-size: 0.85rem; opacity: 0.8; text-transform: uppercase; letter-spacing: 0.08em; margin-top: 0.3rem; }
+
+        /* ── SECTIONS ── */
+        section { padding: 5rem 2rem; }
+        .container { max-width: 1280px; margin: 0 auto; }
+        .section-label {
+            font-size: 0.8rem; font-weight: 700; text-transform: uppercase;
+            letter-spacing: 0.15em; color: var(--primary); margin-bottom: 0.6rem;
+        }
+        .section-title { margin-bottom: 3.5rem; }
+        .section-title h2 {
+            font-size: clamp(1.8rem, 4vw, 2.8rem);
+            font-weight: 800; color: var(--text-dark); margin-bottom: 0.6rem;
+        }
+        .section-title p { color: var(--text-light); font-size: 1.1rem; max-width: 560px; }
+        .section-title.center { text-align: center; }
+        .section-title.center p { margin: 0 auto; }
+
+        /* ── SERVICES ── */
+        .services-section { background: var(--bg-section); }
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(290px, 1fr));
+            gap: 1.5rem;
+        }
+        .service-card {
+            padding: 2.2rem 2rem;
+            transition: transform 0.3s, box-shadow 0.3s;
+            background: #fff;
+            overflow: hidden;
+        }
+        .service-card:hover {
+            transform: translateY(-6px);
+            box-shadow: 0 24px 50px rgba(0,0,0,0.1);
+        }
+        .service-icon {
+            width: 56px; height: 56px;
+            background: rgba(255,255,255,0.15);
+            border-radius: 14px;
+            display: flex; align-items: center; justify-content: center;
+            font-size: 1.4rem; color: #fff; margin-bottom: 1.2rem;
+        }
+        .service-card h3 { font-size: 1.15rem; margin-bottom: 0.6rem; font-weight: 700; }
+        .service-card p { font-size: 0.92rem; line-height: 1.6; }
+
+        /* ── ABOUT ── */
+        .about-section { background: var(--bg); }
+        .about-grid {
+            display: grid; grid-template-columns: 1fr 1fr;
+            gap: 5rem; align-items: center;
+        }
+        .about-visual {
+            background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
+            border-radius: 24px;
+            min-height: 460px;
+            display: flex; align-items: center; justify-content: center;
+            position: relative; overflow: hidden;
+        }
+        .about-visual::before {
+            content: '';
+            position: absolute;
+            top: -40px; right: -40px;
+            width: 200px; height: 200px;
+            border-radius: 50%;
+            background: rgba(255,255,255,0.07);
+        }
+        .about-visual-icon {
+            font-size: 7rem; color: rgba(255,255,255,0.9);
+            position: relative; z-index: 1;
+        }
+        .about-content { padding: 1rem 0; }
+        .about-content h2 { font-size: clamp(1.7rem,3vw,2.4rem); margin-bottom: 1rem; }
+        .about-content > p { color: var(--text-light); margin-bottom: 2rem; font-size: 1.05rem; }
+        .about-list { list-style: none; display: flex; flex-direction: column; gap: 0.7rem; }
+        .about-list li {
+            display: flex; align-items: center; gap: 0.9rem;
+            font-weight: 500; font-size: 0.97rem;
+        }
+        .about-list li i {
+            color: var(--primary); font-size: 1rem;
+            width: 20px; flex-shrink: 0;
+        }
+
+        /* ── PROCESS ── */
+        .process-section { background: var(--bg-section); }
+        .process-grid {
+            display: grid; grid-template-columns: repeat(3, 1fr); gap: 2rem;
+        }
+        .process-step {
+            text-align: center; padding: 2.5rem 1.5rem;
+            background: #fff; border-radius: 20px;
+            position: relative;
+        }
+        .step-number {
+            position: absolute; top: -18px; left: 50%; transform: translateX(-50%);
+            background: var(--primary); color: #fff;
+            width: 36px; height: 36px; border-radius: 50%;
+            font-weight: 900; font-size: 1rem;
+            display: flex; align-items: center; justify-content: center;
+            font-family: 'Bebas Neue', cursive;
+        }
+        .step-icon { font-size: 2.5rem; color: var(--primary); margin: 1rem 0; }
+        .process-step h3 { font-size: 1.15rem; margin-bottom: 0.6rem; }
+        .process-step p { color: var(--text-light); font-size: 0.92rem; }
+
+        /* ── TESTIMONIALS ── */
+        .testimonials-section { background: var(--bg); }
+        .testimonial-grid {
+            display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 1.5rem;
+        }
+        .testimonial-card {
+            background: var(--bg-section);
+            border-radius: 20px; padding: 2rem;
+            border: 1px solid var(--border);
+        }
+        .stars {
+            display: flex; align-items: center; gap: 0.5rem;
+            color: #f59e0b; font-size: 1.1rem; margin-bottom: 1rem;
+        }
+        .rating-text { font-weight: 700; color: var(--text-dark); }
+        .testimonial-card p { color: var(--text-light); font-style: italic; margin-bottom: 1.2rem; line-height: 1.7; }
+        .reviewer { font-weight: 700; font-size: 0.9rem; }
+        .verified { color: var(--primary); font-weight: 500; font-size: 0.8rem; }
+
+        /* ── CTA ── */
+        .cta-section {
+            background: linear-gradient(135deg, var(--primary-dark) 0%, var(--primary) 100%);
+            color: #fff; text-align: center; padding: 6rem 2rem;
+            position: relative; overflow: hidden;
+        }
+        .cta-section::before {
+            content: '';
+            position: absolute; inset: 0;
+            background: radial-gradient(ellipse at 90% 80%, rgba(249,115,22,0.2) 0%, transparent 60%);
+        }
+        .cta-section h2 {
+            font-size: clamp(2rem, 5vw, 3.5rem);
+            margin-bottom: 1rem; position: relative;
+        }
+        .cta-section p { opacity: 0.9; font-size: 1.15rem; margin-bottom: 2.5rem; position: relative; }
+        .cta-section .btn { position: relative; }
+        .cta-phone {
+            margin-top: 2rem;
+            font-size: 1.05rem; opacity: 0.8; position: relative;
+        }
+
+        /* ── FOOTER ── */
+        footer {
+            background: #0f172a;
+            color: #94a3b8;
+            padding: 3rem 2rem; text-align: center;
+        }
+        .footer-links {
+            display: flex; justify-content: center; gap: 2.5rem;
+            list-style: none; margin-bottom: 2rem; flex-wrap: wrap;
+        }
+        .footer-links a { color: #94a3b8; text-decoration: none; font-size: 0.9rem; }
+        .footer-links a:hover { color: #f97316; }
+        footer p { font-size: 0.85rem; }
+        .footer-name { color: #fff; font-weight: 700; font-size: 1rem; margin-bottom: 0.3rem; }
+
+        /* ── DEMO BANNER ── */
+        .demo-banner {
+            position: fixed; bottom: 0; left: 0; width: 100%; z-index: 9999;
+            background: #0f172a;
+            color: #fff; text-align: center;
+            padding: 0.75rem 1rem; font-size: 0.88rem;
+            border-top: 2px solid #f97316;
+        }
+        .demo-banner strong { color: #f97316; }
+
+        /* ── RESPONSIVE ── */
+        @media (max-width: 768px) {
+            .about-grid, .process-grid { grid-template-columns: 1fr; }
+            .nav-links { display: none; }
+            .about-visual { min-height: 220px; }
+            .about-visual-icon { font-size: 4rem; }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- NAVBAR -->
+    <nav>
+        <div class="nav-inner">
+            <a href="#" class="logo">Melvin Caldwell Concrete Construction</a>
+            <ul class="nav-links">
+                <li><a href="#services">Services</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#process">How It Works</a></li>
+                <li><a href="#reviews">Reviews</a></li>
+                <li><a href="#contact" class="nav-cta">Free Quote</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- HERO -->
+    <section class="hero">
+        <div class="hero-badge">
+            <i class="fas fa-award"></i>
+            Decades of Experience
+        </div>
+        <h1>Melvin Caldwell Concrete Construction</h1>
+        <p class="hero-tagline">Built on Solid Ground. Trusted Concrete Contractor serving Omaha, NE and surrounding areas.</p>
+        <div class="hero-actions">
+            <a href="tel:+14025550193" class="btn btn-primary">
+                <i class="fas fa-phone"></i> Call (402) 555-0193
+            </a>
+            <a href="#services" class="btn btn-ghost">
+                <i class="fas fa-arrow-down"></i> Our Services
+            </a>
+        </div>
+    </section>
+
+    <!-- STATS -->
+    <div class="stats-bar">
+        <div class="stats-inner">
+            <div class="stat">
+                <div class="stat-num">9+</div>
+                <div class="stat-label">Years Experience</div>
+            </div>
+            <div class="stat">
+                <div class="stat-num">1000+</div>
+                <div class="stat-label">Jobs Completed</div>
+            </div>
+            <div class="stat">
+                <div class="stat-num">4.9★</div>
+                <div class="stat-label">Average Rating</div>
+            </div>
+            <div class="stat">
+                <div class="stat-num">100%</div>
+                <div class="stat-label">Satisfaction Rate</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- SERVICES -->
+    <section id="services" class="services-section">
+        <div class="container">
+            <div class="section-title center">
+                <div class="section-label">What We Do</div>
+                <h2>Our Concrete Contractor Services</h2>
+                <p>Comprehensive solutions for every job, delivered with professionalism and care.</p>
+            </div>
+            <div class="services-grid">
+
+                <div class="service-card" style="border-radius: 4px; border-bottom: 4px solid var(--accent); background: #1e293b; color: #f1f5f9;">
+                    <div class="service-icon"><i class="fas fa-check-circle"></i></div>
+                    <h3 style="color:#f1f5f9;">Driveway Paving</h3>
+                    <p style="color:#94a3b8;">Professional driveway paving tailored to your needs. Serving Omaha, NE and surrounding areas with quality you can count on.</p>
+                </div>
+                <div class="service-card" style="border-radius: 4px; border-bottom: 4px solid var(--accent); background: #1e293b; color: #f1f5f9;">
+                    <div class="service-icon"><i class="fas fa-star"></i></div>
+                    <h3 style="color:#f1f5f9;">Patio & Walkway</h3>
+                    <p style="color:#94a3b8;">Professional patio & walkway tailored to your needs. Serving Omaha, NE and surrounding areas with quality you can count on.</p>
+                </div>
+                <div class="service-card" style="border-radius: 4px; border-bottom: 4px solid var(--accent); background: #1e293b; color: #f1f5f9;">
+                    <div class="service-icon"><i class="fas fa-shield-halved"></i></div>
+                    <h3 style="color:#f1f5f9;">Foundation Work</h3>
+                    <p style="color:#94a3b8;">Professional foundation work tailored to your needs. Serving Omaha, NE and surrounding areas with quality you can count on.</p>
+                </div>
+                <div class="service-card" style="border-radius: 4px; border-bottom: 4px solid var(--accent); background: #1e293b; color: #f1f5f9;">
+                    <div class="service-icon"><i class="fas fa-cog"></i></div>
+                    <h3 style="color:#f1f5f9;">Stamped Concrete</h3>
+                    <p style="color:#94a3b8;">Professional stamped concrete tailored to your needs. Serving Omaha, NE and surrounding areas with quality you can count on.</p>
+                </div>
+                <div class="service-card" style="border-radius: 4px; border-bottom: 4px solid var(--accent); background: #1e293b; color: #f1f5f9;">
+                    <div class="service-icon"><i class="fas fa-handshake"></i></div>
+                    <h3 style="color:#f1f5f9;">Concrete Repair</h3>
+                    <p style="color:#94a3b8;">Professional concrete repair tailored to your needs. Serving Omaha, NE and surrounding areas with quality you can count on.</p>
+                </div>
+                <div class="service-card" style="border-radius: 4px; border-bottom: 4px solid var(--accent); background: #1e293b; color: #f1f5f9;">
+                    <div class="service-icon"><i class="fas fa-chart-line"></i></div>
+                    <h3 style="color:#f1f5f9;">Retaining Walls</h3>
+                    <p style="color:#94a3b8;">Professional retaining walls tailored to your needs. Serving Omaha, NE and surrounding areas with quality you can count on.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ABOUT -->
+    <section id="about" class="about-section">
+        <div class="container">
+            <div class="about-grid">
+                <div class="about-visual">
+                    <div class="about-visual-icon"><i class="fas fa-helmet-safety"></i></div>
+                </div>
+                <div class="about-content">
+                    <div class="section-label">About Us</div>
+                    <h2>Why Omaha Trusts Melvin Caldwell Concrete Construction</h2>
+                    <p>Melvin Caldwell Concrete Construction has been the go-to concrete contractor for homeowners and businesses in Omaha, NE. We're family-owned, locally operated, and deeply committed to the communities we serve. Every job gets our full attention — no shortcuts, no excuses.</p>
+                    <ul class="about-list">
+                        <li><i class="fas fa-check"></i> Family Owned &amp; Operated in Omaha, NE</li>
+                        <li><i class="fas fa-check"></i> 9+ Years of Local Experience</li>
+                        <li><i class="fas fa-check"></i> Licensed &amp; Fully Insured</li>
+                        <li><i class="fas fa-check"></i> Free Estimates — No Obligation</li>
+                        <li><i class="fas fa-check"></i> Competitive, Honest Pricing</li>
+                        <li><i class="fas fa-check"></i> Satisfaction Guaranteed on Every Job</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- PROCESS -->
+    <section id="process" class="process-section">
+        <div class="container">
+            <div class="section-title center">
+                <div class="section-label">How It Works</div>
+                <h2>Getting Started is Easy</h2>
+                <p>Three simple steps to professional concrete contractor service.</p>
+            </div>
+            <div class="process-grid">
+
+                <div class="process-step">
+                    <div class="step-number">1</div>
+                    <div class="step-icon"><i class="fas fa-phone"></i></div>
+                    <h3>Call or Text Us</h3>
+                    <p>Reach out to Melvin Caldwell Concrete Construction for a fast, free estimate. We respond quickly — usually within the hour.</p>
+                </div>
+                <div class="process-step">
+                    <div class="step-number">2</div>
+                    <div class="step-icon"><i class="fas fa-calendar-check"></i></div>
+                    <h3>Schedule a Visit</h3>
+                    <p>We work around your schedule. Flexible appointments including evenings and weekends.</p>
+                </div>
+                <div class="process-step">
+                    <div class="step-number">3</div>
+                    <div class="step-icon"><i class="fas fa-star"></i></div>
+                    <h3>We Do the Work</h3>
+                    <p>Our experienced crew arrives on time, completes the job to the highest standard, and cleans up after.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- REVIEWS -->
+    <section id="reviews" class="testimonials-section">
+        <div class="container">
+            <div class="section-title center">
+                <div class="section-label">Customer Reviews</div>
+                <h2>What Our Clients Say</h2>
+                <p>Real results. Real reviews. Real Omaha customers.</p>
+            </div>
+            <div class="testimonial-grid">
+
+                <div class="testimonial-card">
+                    <div class="stars"><span>★★★★★</span> <span class="rating-text">5.0</span></div>
+                    <p>"They showed up on time, did exceptional work, and left my place cleaner than they found it. Melvin Caldwell Concrete Construction is the real deal."</p>
+                    <div class="reviewer">— James R. <span class="verified">✓ Verified Customer</span></div>
+                </div>
+                <div class="testimonial-card">
+                    <div class="stars"><span>★★★★★</span> <span class="rating-text">5.0</span></div>
+                    <p>"I've tried several concrete contractor services in Omaha and none compare. Honest pricing, zero surprises. Already booked them again."</p>
+                    <div class="reviewer">— Maria G. <span class="verified">✓ Verified Customer</span></div>
+                </div>
+                <div class="testimonial-card">
+                    <div class="stars"><span>★★★★★</span> <span class="rating-text">5.0</span></div>
+                    <p>"Called them in a bind and they came through fast. Professional crew, great results. Highly recommend to anyone in Omaha."</p>
+                    <div class="reviewer">— David T. <span class="verified">✓ Verified Customer</span></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA -->
+    <section id="contact" class="cta-section">
+        <h2>Ready to Get Started?</h2>
+        <p>Contact Melvin Caldwell Concrete Construction today for your free, no-obligation estimate.</p>
+        <a href="tel:+14025550193" class="btn btn-primary">
+            <i class="fas fa-phone"></i> Call Now: (402) 555-0193
+        </a>
+        <p class="cta-phone"><i class="fas fa-map-marker-alt"></i> 2021 N 100th St, Omaha, NE 68134</p>
+    </section>
+
+    <!-- FOOTER -->
+    <footer>
+        <ul class="footer-links">
+            <li><a href="#services">Services</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#process">How It Works</a></li>
+            <li><a href="#reviews">Reviews</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+        <p class="footer-name">Melvin Caldwell Concrete Construction</p>
+        <p>2021 N 100th St, Omaha, NE 68134</p>
+        <p style="margin-top: 0.5rem;">&copy; 2026 Melvin Caldwell Concrete Construction. All Rights Reserved.</p>
+    </footer>
+
+    <!-- DEMO BANNER -->
+    <div class="demo-banner">
+        🚀 <strong>DEMO SITE</strong> — This professional website was built for <strong>Melvin Caldwell Concrete Construction</strong> in Omaha, NE. Claim it today!
+    </div>
+
+</body>
+</html>
